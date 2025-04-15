@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Realtime Inflation Calculator</title>
+  <link rel="stylesheet" href="styles\realtime.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <i class="fas fa-chart-line navbar-icon"></i>
+      <a href="index.html" class="navbar-title">InflaCalc</a>
+    </div>
+    <ul class="navbar-tabs">
+      <li class="navbar-tab active">
+        <a href="realtime.html"><i class="fas fa-calculator"></i> Realtime Inflation</a>
+      </li>
+      <li class="navbar-tab">
+        <a href="whatisinflation.html"><i class="fas fa-info-circle"></i> What is Inflation?</a>
+      </li>
+      <li class="navbar-tab">
+        <a href="historicaldata.html"><i class="fas fa-chart-bar"></i> Historical Data</a>
+      </li>
+      <li class="navbar-tab">
+        <a href="aboutus.html"><i class="fas fa-users"></i> About Us</a>
+      </li>
+      <li class="navbar-tab">
+        <a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Calculator UI -->
+  <div class="container">
+    <h1>Inflation Calculator</h1>
+
+    <div class="input-group">
+      <label for="currentCost">Current Cost</label>
+      <input type="range" id="currentCost" min="0" max="5000000" value="100000" />
+      <input type="text" id="currentCostValue" class="value-input" value="₹1,00,000" readonly />
+    </div>
+
+    <div class="input-group">
+      <label for="inflationRate">Inflation Rate (%)</label>
+      <input type="range" id="inflationRate" min="0" max="20" step="0.1" value="6" />
+      <input type="text" id="inflationRateValue" class="value-input" value="6%" readonly />
+    </div>
+
+    <div class="input-group">
+      <label for="timePeriod">Time Period (Years)</label>
+      <input type="range" id="timePeriod" min="0" max="20" value="10" />
+      <input type="text" id="timePeriodValue" class="value-input" value="10 Yr" readonly />
+    </div>
+
+    <div class="result">
+      <h2>Result</h2>
+      <p><strong>Current Cost:</strong> <span id="resultCurrentCost">₹0</span></p>
+      <p><strong>Cost Increase:</strong> <span id="resultCostIncrease">₹0</span></p>
+      <p><strong>Future Cost:</strong> <span id="resultFutureCost">₹0</span></p>
+    </div>
+
+    <canvas id="inflationChart" width="300" height="300"></canvas>
+  </div>
+
+  <script src="scripts\realtime.js"></script>
+</body>
+</html>

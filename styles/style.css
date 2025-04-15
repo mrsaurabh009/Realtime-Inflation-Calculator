@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #aee8f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #2563eb;
+}
+
+header p {
+    color: #64748b;
+}
+
+/* Calculator Card */
+.calculator-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Currency Toggle */
+.currency-toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.toggle-switch {
+    display: flex;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.toggle-switch button {
+    padding: 8px 15px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.toggle-switch button.active {
+    background: #2563eb;
+    color: white;
+}
+
+/* Input Groups */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.input-with-symbol {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.currency-symbol {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.input-with-symbol input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+}
+
+input[type="date"], select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Primary Button */
+.primary-btn {
+    width: 100%;
+    padding: 14px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Results Card */
+.results-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.result-values {
+    margin: 20px 0;
+}
+
+.comparison {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2563eb;
+}
+
+.percentage-change {
+    color: #64748b;
+}
+
+.change-amount {
+    color: #ef4444;
+}
+
+/* History Card */
+.history-card {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 4px solid #2563eb;
+}
+
+.history-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Chart Container - CRITICAL FIX */
+.chart-container {
+    margin-top: 30px;
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+#inflationChart {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .chart-container {
+        height: 300px;
+    }
+}
+
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.navbar-brand a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-tabs {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.navbar-tab a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-tab a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.navbar-tab.active a {
+    background-color: rgba(255, 255, 255, 0.25);
+    font-weight: 600;
+}
+
+.badge {
+    background: linear-gradient(135deg, #f43f5e, #ec4899, #8b5cf6, #06b6d4);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.6rem;
+    margin-left: 6px;
+    animation: pulse 2s infinite ease-in-out;
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.1); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  

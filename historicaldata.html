@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historical Data - InflaCalc</title>
+  <link rel="stylesheet" href="styles\historical.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <i class="fas fa-chart-line navbar-icon"></i>
+      <a href="index.html" class="navbar-title">InflaCalc</a>
+    </div>
+    <ul class="navbar-tabs">
+      <li class="navbar-tab">
+        <a href="realtime.html"><i class="fas fa-calculator"></i> Realtime Inflation</a>
+      </li>
+      <li class="navbar-tab">
+        <a href="whatisinflation.html"><i class="fas fa-info-circle"></i> What is Inflation?</a>
+      </li>
+      <li class="navbar-tab active">
+        <a href="historicaldata.html"><i class="fas fa-chart-bar"></i> Historical Data</a>
+      </li>
+      <li class="navbar-tab">
+        <a href="aboutus.html"><i class="fas fa-users"></i> About Us</a>
+      </li>
+      <li class="navbar-tab">
+        <a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Historical Content -->
+  <main class="historical-container">
+    <section class="historical-section">
+      <h1>HISTORICAL DATA</h1>
+      <p>
+        <strong>Historical Inflation and Exchange Rate Data (1900–2020)</strong>
+      </p>
+      <h2>Methodology:</h2>
+      <p>
+        For India, inflation rates are derived from CPI or WPI data where available (e.g., post-1958 from <a href="https://www.in2013dollars.com">in2013dollars.com</a> and post-1960 from <a href="https://www.eztax.in">EZTax.in</a>). Pre-1950 data is estimated using exchange rate changes and qualitative economic context (e.g., <a href="https://www.measuringworth.com">measuringworth.com</a>, <a href="https://www.bookmyforex.com">bookmyforex.com</a>).
+      </p>
+      <p>
+        For the U.S., inflation rates are based on CPI data from <a href="https://www.minneapolisfed.org">minneapolisfed.org</a> and <a href="https://www.usinflationcalculator.com">usinflationcalculator.com</a>. Exchange rates (USD to INR) are sourced from historical records.
+      </p>
+      <p>
+        Note: Gaps are filled with approximate trends due to inconsistent data.
+      </p>
+
+        <div class="data-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>India Inflation Rate (Approx.)</th>
+                  <th>U.S. Inflation Rate (%)</th>
+                  <th>USD to INR Exchange Rate (Approx.)</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1900</td><td>N/A (No reliable CPI data)</td><td>1.2%</td><td>0.03–0.05 INR (est.)</td><td>Pre-independence, rupee tied to British Pound; limited data.</td></tr>
+                <tr><td>1910</td><td>N/A (No reliable CPI data)</td><td>4.4%</td><td>0.03–0.05 INR (est.)</td><td>British colonial rule; U.S. inflation spiked during WWI.</td></tr>
+                <tr><td>1920</td><td>N/A (No reliable CPI data)</td><td>2.6%</td><td>0.02–0.03 INR (est.)</td><td>Post-WWI economic instability; Great Depression followed.</td></tr>
+                <tr><td>1930</td><td>N/A (No reliable CPI data)</td><td>-2.3% (deflation)</td><td>0.02 INR (est.)</td><td>Great Depression caused deflation in U.S.; India under colonial policy.</td></tr>
+                <tr><td>1940</td><td>N/A (No reliable CPI data)</td><td>0.7%</td><td>0.30 INR (est.)</td><td>WW-II impact; India introduced quaternary silver rupee.</td></tr>
+                <tr><td>1950</td><td>N/A (CPI starts from 1957)</td><td>1.3%</td><td>4.76 INR</td><td>Post-independence stability; U.S. post-WWII recovery.</td></tr>
+                <tr><td>1960</td><td>4.78% (est. from 1958)</td><td>1.7%</td><td>4.76 INR</td><td>Fixed exchange rate; India’s early inflation data begins.</td></tr>
+                <tr><td>1970</td><td>5.2% (avg. 1960s)</td><td>5.9%</td><td>7.50 INR</td><td>Devaluation due to wars and drought; U.S. inflation rose.</td></tr>
+                <tr><td>1980</td><td>11.3% (avg. 1970s)</td><td>13.5%</td><td>7.86 INR</td><td>Oil crisis impact; high U.S. inflation.</td></tr>
+                <tr><td>1990</td><td>9.0% (avg. 1980s)</td><td>5.4%</td><td>17.50 INR</td><td>Economic liberalization began; U.S. inflation moderated.</td></tr>
+                <tr><td>2000</td><td>4.0% (avg. 1990s)</td><td>3.4%</td><td>44.31 INR</td><td>IT boom stabilized India; U.S. stable growth.</td></tr>
+                <tr><td>2010</td><td>12.1% (avg. 2000s)</td><td>1.6%</td><td>46.02 INR</td><td>High Indian inflation; U.S. post-recession recovery.</td></tr>
+                <tr><td>2020</td><td>6.2% (avg. 2010s)</td><td>1.2%</td><td>74.31 INR</td><td>Pandemic impact; India’s inflation moderated.</td></tr>
+
+              </tbody>
+            </table>
+          </div>
+          
+
+      <h2>References</h2>
+      <ul class="reference-list">
+        <li><strong>BankBazaar.com</strong> – <a href="https://www.bankbazaar.com/currency-exchange/indian-rupee-to-us-dollar-historical-exchange-rate.html">Historical exchange rate data</a></li>
+        <li><strong>BookMyForex.com</strong> – <a href="https://www.bookmyforex.com/blog/historical-exchange-rate-of-indian-rupee/">INR/USD trends since 1900</a></li>
+        <li><strong>EZTax.in</strong> – <a href="https://www.eztax.in/blog/inflation-rate-in-india/">Indian WPI/CPI inflation</a></li>
+        <li><strong>In2013Dollars.com</strong> – <a href="https://www.in2013dollars.com/India-inflation">Indian CPI data</a></li>
+        <li><strong>MeasuringWorth.com</strong> – <a href="https://www.measuringworth.com/datasets/indiaCPI/result.php">Pre-1950 Indian CPI estimates</a></li>
+        <li><strong>Minneapolis Fed</strong> – <a href="https://www.minneapolisfed.org">U.S. inflation calculator</a></li>
+        <li><strong>USInflationCalculator.com</strong> – <a href="https://www.usinflationcalculator.com/inflation/historical-inflation-rates/">Year-by-year U.S. inflation</a></li>
+        <li><strong>Reserve Bank of India</strong> – <a href="https://www.rbi.org.in">Official RBI archive</a></li>
+        <li><strong>U.S. Bureau of Labor Statistics</strong> – <a href="https://www.bls.gov/data/inflation_calculator.htm">US BLS CPI Data</a></li>
+      </ul>
+
+      <h3>Notes on Data Compilation</h3>
+      <p>India Inflation (Pre-1950): Estimated from historical context due to lack of standardized CPI data.</p>
+      <p>India Inflation (Post-1950): Based on WPI and CPI sources listed above.</p>
+      <p>U.S. Inflation: Based on consistent CPI datasets and verified via multiple sources.</p>
+      <p>Exchange Rates: Pulled from published and verified financial sources.</p>
+      <p><strong>Note:</strong> Pre-1950 Indian inflation estimates are approximate.</p>
+    </section>
+  </main>
+</body>
+</html>

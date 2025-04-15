@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InflaCalc - Inflation Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles\style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <i class="fas fa-chart-line navbar-icon"></i>
+            <a href="index.html" class="navbar-title">InflaCalc</a>
+        </div>
+        <ul class="navbar-tabs">
+            <li class="navbar-tab active">
+                <a href="realtime.html">
+                    <i class="fas fa-calculator"></i> Realtime Inflation 
+                    <span class="badge">New</span>
+                  </a>
+                  
+            </li>
+            <li class="navbar-tab">
+                <a href="whatisinflation.html"><i class="fas fa-info-circle"></i> What is Inflation?</a>
+            </li>
+            <li class="navbar-tab">
+                <a href="historicaldata.html"><i class="fas fa-chart-bar"></i> Historical Data</a>
+            </li>
+            <li class="navbar-tab">
+                <a href="aboutus.html"><i class="fas fa-users"></i> About Us</a>
+            </li>
+            <li class="navbar-tab">
+                <a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>InflaCalc</h1>
+            <p>See how inflation affects your money over time</p>
+        </header>
+        
+        <main>
+            <div class="calculator-card">
+                <div class="currency-toggle">
+                    <span>Currency:</span>
+                    <div class="toggle-switch">
+                        <button class="active" data-currency="USD">USD</button>
+                        <button data-currency="INR">INR</button>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="amount">Enter Amount</label>
+                    <div class="input-with-symbol">
+                        <span class="currency-symbol">$</span>
+                        <input type="number" id="amount" placeholder="100" value="100">
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="current-date">Today's Date</label>
+                    <input type="date" id="current-date">
+                </div>
+                
+                <div class="input-group">
+                    <label for="target-year">Compare to Year</label>
+                    <select id="target-year"></select>
+                </div>
+                
+                <button id="calculate-btn" class="primary-btn">Calculate Inflation</button>
+            </div>
+            
+            <div class="results-card hidden">
+                <h3>💰 Inflation Result</h3>
+                <div class="result-values">
+                    <p class="comparison">$100 in 2023 ≈ $4.50 in 1960</p>
+                    <p class="percentage-change">Purchasing power ↓ <span class="change-amount">95.5%</span></p>
+                </div>
+                
+                <div class="history-card">
+                    <p class="history-title">📜 What could you buy then?</p>
+                    <p class="history-fact">In 1960, $100 could buy <strong>10 movie tickets</strong></p>
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="inflationChart" width="100%" height="400"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="scripts\script.js"></script>
+</body>
+</html>
